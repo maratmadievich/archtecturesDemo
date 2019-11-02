@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04180352236DA141003DADAD /* ScreenshotCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04180351236DA141003DADAD /* ScreenshotCellPresenter.swift */; };
+		04180354236DA343003DADAD /* ScreenshotCellPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04180353236DA343003DADAD /* ScreenshotCellPresenterFactory.swift */; };
+		04180357236DB439003DADAD /* DateStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04180356236DB439003DADAD /* DateStringConverter.swift */; };
+		0418035A236DB5D5003DADAD /* SearchSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04180359236DB5D5003DADAD /* SearchSongView.swift */; };
+		0418035C236DB67A003DADAD /* SearchSongPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418035B236DB67A003DADAD /* SearchSongPresenter.swift */; };
+		0418035F236DBD8F003DADAD /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418035E236DBD8F003DADAD /* SongCell.swift */; };
+		04180361236DC272003DADAD /* SongCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04180360236DC272003DADAD /* SongCellPresenter.swift */; };
+		043445D5236745E800EA3729 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043445D4236745E800EA3729 /* UpdateViewController.swift */; };
+		043445D7236745F800EA3729 /* UpdatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043445D6236745F800EA3729 /* UpdatePresenter.swift */; };
+		043445DB2367554C00EA3729 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043445DA2367554C00EA3729 /* UpdateViewController.xib */; };
+		04AA625F236DE20300017757 /* SongCellPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */; };
+		04AA6262236E148300017757 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6261236E148300017757 /* RootView.swift */; };
+		04BFEF6C2368932D00E4AFEA /* ScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEF6B2368932D00E4AFEA /* ScreenshotsViewController.swift */; };
+		04BFEF6E2368933800E4AFEA /* ScreenshotsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEF6D2368933800E4AFEA /* ScreenshotsPresenter.swift */; };
+		04BFEF702368934700E4AFEA /* ScreenshotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEF6F2368934700E4AFEA /* ScreenshotsViewController.xib */; };
+		04BFEF732368A03800E4AFEA /* ScreenshotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEF722368A03800E4AFEA /* ScreenshotCell.xib */; };
+		04BFEF752368A05C00E4AFEA /* ScreenshotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEF742368A05C00E4AFEA /* ScreenshotCell.swift */; };
 		2BACE96F2360C4600099A2C9 /* HeaderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BACE96D2360C4600099A2C9 /* HeaderInfoViewController.swift */; };
 		2BACE9702360C4600099A2C9 /* HeaderInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BACE96E2360C4600099A2C9 /* HeaderInfoViewController.xib */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
@@ -31,6 +48,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04180351236DA141003DADAD /* ScreenshotCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCellPresenter.swift; sourceTree = "<group>"; };
+		04180353236DA343003DADAD /* ScreenshotCellPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCellPresenterFactory.swift; sourceTree = "<group>"; };
+		04180356236DB439003DADAD /* DateStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringConverter.swift; sourceTree = "<group>"; };
+		04180359236DB5D5003DADAD /* SearchSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongView.swift; sourceTree = "<group>"; };
+		0418035B236DB67A003DADAD /* SearchSongPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongPresenter.swift; sourceTree = "<group>"; };
+		0418035E236DBD8F003DADAD /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		04180360236DC272003DADAD /* SongCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellPresenter.swift; sourceTree = "<group>"; };
+		043445D4236745E800EA3729 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		043445D6236745F800EA3729 /* UpdatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePresenter.swift; sourceTree = "<group>"; };
+		043445DA2367554C00EA3729 /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellPresenterFactory.swift; sourceTree = "<group>"; };
+		04AA6261236E148300017757 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		04BFEF6B2368932D00E4AFEA /* ScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewController.swift; sourceTree = "<group>"; };
+		04BFEF6D2368933800E4AFEA /* ScreenshotsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsPresenter.swift; sourceTree = "<group>"; };
+		04BFEF6F2368934700E4AFEA /* ScreenshotsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotsViewController.xib; sourceTree = "<group>"; };
+		04BFEF722368A03800E4AFEA /* ScreenshotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotCell.xib; sourceTree = "<group>"; };
+		04BFEF742368A05C00E4AFEA /* ScreenshotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCell.swift; sourceTree = "<group>"; };
 		2BACE96D2360C4600099A2C9 /* HeaderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfoViewController.swift; sourceTree = "<group>"; };
 		2BACE96E2360C4600099A2C9 /* HeaderInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInfoViewController.xib; sourceTree = "<group>"; };
 		8BE349225151AE13B1EDE333 /* Pods-iOSArchitecturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +104,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04180355236DB421003DADAD /* DateStringConverter */ = {
+			isa = PBXGroup;
+			children = (
+				04180356236DB439003DADAD /* DateStringConverter.swift */,
+			);
+			path = DateStringConverter;
+			sourceTree = "<group>";
+		};
+		04180358236DB59D003DADAD /* SearchSong */ = {
+			isa = PBXGroup;
+			children = (
+				0418035D236DBCF4003DADAD /* Cell */,
+				04180359236DB5D5003DADAD /* SearchSongView.swift */,
+				0418035B236DB67A003DADAD /* SearchSongPresenter.swift */,
+				04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */,
+			);
+			path = SearchSong;
+			sourceTree = "<group>";
+		};
+		0418035D236DBCF4003DADAD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0418035E236DBD8F003DADAD /* SongCell.swift */,
+				04180360236DC272003DADAD /* SongCellPresenter.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		043445D32367457800EA3729 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				043445D4236745E800EA3729 /* UpdateViewController.swift */,
+				043445D6236745F800EA3729 /* UpdatePresenter.swift */,
+				043445DA2367554C00EA3729 /* UpdateViewController.xib */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		04AA6260236E146900017757 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				04AA6261236E148300017757 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		04BFEF6A2368931300E4AFEA /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				04BFEF712368A01F00E4AFEA /* Cell */,
+				04BFEF6B2368932D00E4AFEA /* ScreenshotsViewController.swift */,
+				04BFEF6D2368933800E4AFEA /* ScreenshotsPresenter.swift */,
+				04180353236DA343003DADAD /* ScreenshotCellPresenterFactory.swift */,
+				04BFEF6F2368934700E4AFEA /* ScreenshotsViewController.xib */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		04BFEF712368A01F00E4AFEA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04BFEF722368A03800E4AFEA /* ScreenshotCell.xib */,
+				04BFEF742368A05C00E4AFEA /* ScreenshotCell.swift */,
+				04180351236DA141003DADAD /* ScreenshotCellPresenter.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2BACE96C2360C4290099A2C9 /* HeaderInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +230,13 @@
 		E0E1D2A52034A3560011E01A /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				2BACE96C2360C4290099A2C9 /* HeaderInfoViewController */,
+				04AA6260236E146900017757 /* Root */,
+				04180358236DB59D003DADAD /* SearchSong */,
 				E0E1D2A62034A36C0011E01A /* Search */,
 				E0E1D2A72034A3780011E01A /* AppDetail */,
+				2BACE96C2360C4290099A2C9 /* HeaderInfoViewController */,
+				043445D32367457800EA3729 /* Update */,
+				04BFEF6A2368931300E4AFEA /* Screenshots */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -269,6 +375,7 @@
 		F8A1E0402248511B00FE6448 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04180355236DB421003DADAD /* DateStringConverter */,
 				E0E1D385203AE3E00011E01A /* AppStartManager */,
 				E0E1D393203AE5AA0011E01A /* iTunesSearchService */,
 				E0E1D39D203AE7230011E01A /* ImageDownloader */,
@@ -358,7 +465,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BACE9702360C4600099A2C9 /* HeaderInfoViewController.xib in Resources */,
+				04BFEF732368A03800E4AFEA /* ScreenshotCell.xib in Resources */,
 				E0E1D29D2034A3350011E01A /* LaunchScreen.storyboard in Resources */,
+				043445DB2367554C00EA3729 /* UpdateViewController.xib in Resources */,
+				04BFEF702368934700E4AFEA /* ScreenshotsViewController.xib in Resources */,
 				E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,21 +536,35 @@
 			files = (
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
+				04180354236DA343003DADAD /* ScreenshotCellPresenterFactory.swift in Sources */,
+				04BFEF6E2368933800E4AFEA /* ScreenshotsPresenter.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
+				04180357236DB439003DADAD /* DateStringConverter.swift in Sources */,
+				043445D7236745F800EA3729 /* UpdatePresenter.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
+				04AA6262236E148300017757 /* RootView.swift in Sources */,
+				04BFEF752368A05C00E4AFEA /* ScreenshotCell.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
+				043445D5236745E800EA3729 /* UpdateViewController.swift in Sources */,
+				04AA625F236DE20300017757 /* SongCellPresenterFactory.swift in Sources */,
 				E0E1D39C203AE6420011E01A /* ITunesSong.swift in Sources */,
 				E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */,
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
+				0418035C236DB67A003DADAD /* SearchSongPresenter.swift in Sources */,
 				2BACE96F2360C4600099A2C9 /* HeaderInfoViewController.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
+				04BFEF6C2368932D00E4AFEA /* ScreenshotsViewController.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
+				04180352236DA141003DADAD /* ScreenshotCellPresenter.swift in Sources */,
+				0418035A236DB5D5003DADAD /* SearchSongView.swift in Sources */,
+				04180361236DC272003DADAD /* SongCellPresenter.swift in Sources */,
+				0418035F236DBD8F003DADAD /* SongCell.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

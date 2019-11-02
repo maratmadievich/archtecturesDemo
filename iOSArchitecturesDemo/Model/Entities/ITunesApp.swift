@@ -22,6 +22,9 @@ public struct ITunesApp: Codable {
     public let size: Bytes?
     public let iconUrl: String?
     public let screenshotUrls: [String]
+    public let currentVersion: String?
+    public let currentVersionReleaseDate: String?
+    public let currentVersionDescription: String?
     
     // MARK: - Codable
     
@@ -36,6 +39,10 @@ public struct ITunesApp: Codable {
         case size = "fileSizeBytes"
         case iconUrl = "artworkUrl512"
         case screenshotUrls = "screenshotUrls"
+        
+        case currentVersion = "version"
+        case currentVersionReleaseDate = "currentVersionReleaseDate"
+        case currentVersionDescription = "releaseNotes"
     }
     
     public init(from decoder: Decoder) throws {
@@ -50,6 +57,10 @@ public struct ITunesApp: Codable {
         self.size = (try? container.decode(String.self, forKey: .size)) >>- { Bytes($0) }
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
+        
+        self.currentVersion = try? container.decode(String.self, forKey: .currentVersion)
+        self.currentVersionReleaseDate = try? container.decode(String.self, forKey: .currentVersionReleaseDate)
+        self.currentVersionDescription = try? container.decode(String.self, forKey: .currentVersionDescription)
     }
     
     // MARK: - Init
@@ -63,7 +74,10 @@ public struct ITunesApp: Codable {
                   averageRatingForCurrentVersion: Float?,
                   size: Bytes?,
                   iconUrl: String?,
-                  screenshotUrls: [String]) {
+                  screenshotUrls: [String],
+                  currentVersion: String?,
+                  currentVersionReleaseDate: String?,
+                  currentVersionDescription: String?) {
         self.appName = appName
         self.appUrl = appUrl
         self.company = company
@@ -74,5 +88,9 @@ public struct ITunesApp: Codable {
         self.size = size
         self.iconUrl = iconUrl
         self.screenshotUrls = screenshotUrls
+        
+        self.currentVersion = currentVersion
+        self.currentVersionReleaseDate = currentVersionReleaseDate
+        self.currentVersionDescription = currentVersionDescription
     }
 }
