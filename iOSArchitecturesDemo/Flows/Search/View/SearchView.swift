@@ -11,7 +11,6 @@ import UIKit
 final class SearchView: UIView {
     
     // MARK: - Subviews
-    
     let searchBar = UISearchBar()
     let tableView = UITableView()
     let emptyResultView = UIView()

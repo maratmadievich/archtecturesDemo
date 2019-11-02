@@ -61,7 +61,7 @@ protocol SearchViewProtocol {
 }
 
 class SearchViewITunesServiceAdapter: SearchViewProtocol {
-    
+   
     private let searchService: ITunesSearchService
     
     init(searchService: ITunesSearchService) {
@@ -99,6 +99,7 @@ class SearchViewITunesServiceAdapter: SearchViewProtocol {
 final class SearchViewController: UIViewController {
     
     // MARK: - Private Properties
+    private let navigationTitle = "Find App"
     
     private var searchView: SearchView {
         return self.view as! SearchView
@@ -128,6 +129,7 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = navigationTitle
         self.searchView.searchBar.delegate = self
         
         self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
