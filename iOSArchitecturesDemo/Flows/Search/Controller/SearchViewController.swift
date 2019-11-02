@@ -49,6 +49,7 @@ class SearchItemAppAdapter: SearchItemProtocol {
         cell.configure(with: cellModel)
         return cell
     }
+    
 }
 
 // MARK: -

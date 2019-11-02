@@ -12,6 +12,7 @@ class ITunesAppAdapter: HeaderInfo {
     private let app: ITunesApp
     private let imageDownloader = ImageDownloader()
     
+    
     init(app: ITunesApp) {
         self.app = app
     }
@@ -48,10 +49,14 @@ final class AppDetailViewController: UIViewController {
     private var updateViewController: UpdateViewController?
     private var updateView: UIView?
     
+    private var screenshotsViewController: ScreenshotsViewController?
+    private var screenshotsView: UIView?
+    
     public var app: ITunesApp? {
         didSet {
             self.updateHeader()
             self.configureUdpateView()
+            self.configureScreenshotsView()
         }
     }
     
@@ -71,24 +76,14 @@ final class AppDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationController()
-        self.downloadImage()
         self.addHeader()
         self.addUpdateView()
+        self.addScreenshotsView()
     }
     
     private func configureNavigationController() {
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         self.navigationItem.largeTitleDisplayMode = .never
-    }
-    
-    private func downloadImage() {
-//        guard let url = self.app?.iconUrl else { return }
-//        self.appDetailView.throbber.startAnimating()
-//        self.imageDownloader.getImage(fromUrl: url) { (image, error) in
-//            self.appDetailView.throbber.stopAnimating()
-//            guard let image = image else { return }
-//            self.appDetailView.imageView.image = image
-//        }
     }
 }
 
@@ -115,7 +110,7 @@ extension AppDetailViewController {
                                                      toItem: nil,
                                                      attribute: .notAnAttribute,
                                                      multiplier: 1,
-                                                     constant: 200) )
+                                                     constant: 100) )
         
         
         let headerViewController = HeaderInfoViewController()
@@ -188,7 +183,7 @@ extension AppDetailViewController {
                                                      toItem: nil,
                                                      attribute: .notAnAttribute,
                                                      multiplier: 1,
-                                                     constant: 200))
+                                                     constant: 160))
     }
 
     private func setUpdateViewControllerConstraints() {
@@ -199,6 +194,70 @@ extension AppDetailViewController {
             updateViewController.view.leftAnchor.constraint(equalTo: updateView.leftAnchor),
             updateViewController.view.rightAnchor.constraint(equalTo: updateView.rightAnchor),
             updateViewController.view.bottomAnchor.constraint(equalTo: updateView.bottomAnchor)])
+    }
+    
+}
+
+// MARK: - Add ScreenshotsView
+extension AppDetailViewController {
+    
+    private func addScreenshotsView() {
+        if nil != screenshotsViewController {
+            return
+        }
+        
+        let screenshotsView = UIView()
+        screenshotsView.translatesAutoresizingMaskIntoConstraints = false
+        screenshotsView.backgroundColor = UIColor.red
+        
+        self.view.addSubview(screenshotsView)
+        self.screenshotsView = screenshotsView
+        self.setScreenshotsViewConstraints()
+        
+        let screenshotsViewController = ScreenshotsViewController()
+        self.addChild(screenshotsViewController)
+        screenshotsViewController.didMove(toParent: self)
+        screenshotsViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        screenshotsView.addSubview(screenshotsViewController.view)
+        self.screenshotsViewController = screenshotsViewController
+        self.setScreenshotsViewControllerConstraints()
+        
+        self.configureScreenshotsView()
+    }
+    
+    private func configureScreenshotsView() {
+        if let app = self.app {
+            self.screenshotsViewController?.presenter = ScreenshotsPresenter(app: app)
+        }
+    }
+    
+    
+    private func setScreenshotsViewConstraints() {
+        guard let screenshotsView = screenshotsView,
+        let updateView = updateView else { return }
+        NSLayoutConstraint.activate([
+            screenshotsView.topAnchor.constraint(equalTo: updateView.bottomAnchor),
+            screenshotsView.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor),
+            screenshotsView.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor),
+        screenshotsView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)])
+        
+//        screenshotsView.addConstraint( NSLayoutConstraint(item: screenshotsView,
+//                                                     attribute: .height,
+//                                                     relatedBy: .equal,
+//                                                     toItem: nil,
+//                                                     attribute: .notAnAttribute,
+//                                                     multiplier: 1,
+//                                                     constant: 100))
+    }
+
+    private func setScreenshotsViewControllerConstraints() {
+        guard let screenshotsView = self.screenshotsView,
+            let screenshotsViewController = self.screenshotsViewController else { return }
+        NSLayoutConstraint.activate([
+            screenshotsViewController.view.topAnchor.constraint(equalTo: screenshotsView.topAnchor),
+            screenshotsViewController.view.leftAnchor.constraint(equalTo: screenshotsView.leftAnchor),
+            screenshotsViewController.view.rightAnchor.constraint(equalTo: screenshotsView.rightAnchor),
+            screenshotsViewController.view.bottomAnchor.constraint(equalTo: screenshotsView.bottomAnchor)])
     }
     
 }

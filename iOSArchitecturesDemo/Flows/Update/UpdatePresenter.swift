@@ -30,7 +30,9 @@ class UpdatePresenter: UpdatePresenterProtocol {
     
     func updateDate() -> String {
         if let releaseDate = self.app.currentVersionReleaseDate {
-            return releaseDate
+            let date = DateStringConverter.getDate(from: releaseDate, type: .timeWithTAndZ)
+            let correctDateString = DateStringConverter.getString(from: date, type: .dateTime)
+            return correctDateString
         } else {
             return ""
         }
