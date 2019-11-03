@@ -11,6 +11,7 @@ import Foundation
 protocol SongCellPresenterProtocol {
     func name() -> String
     func artist() -> String
+    func getSong() -> ITunesSong
 }
 
 class SongCellPresenter: SongCellPresenterProtocol {
@@ -30,6 +31,10 @@ class SongCellPresenter: SongCellPresenterProtocol {
     func artist() -> String {
         let returnedText: String = self.song.artistName ?? noArtistText
         return returnedText
+    }
+    
+    func getSong() -> ITunesSong {
+        return self.song
     }
     
 }
