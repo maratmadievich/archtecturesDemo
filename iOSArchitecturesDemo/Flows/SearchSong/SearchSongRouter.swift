@@ -10,15 +10,16 @@ import UIKit
 
 protocol SearchSongRouterProtocol: class {
     
-    func openPlayer(song: ITunesSong)
+    func openPlayer(song: ITunesSong, allSongs: [ITunesSong])
 }
 
 class SearchSongRouter: SearchSongRouterProtocol {
     
     weak var view: UIViewController?
     
-    internal func openPlayer(song: ITunesSong) {
-        let viewController = PlayerViewController()
+    internal func openPlayer(song: ITunesSong, allSongs: [ITunesSong]) {
+        let viewModel: PlayerViewModelProtocol = PlayerViewModel(song: song, allSongs: allSongs)
+        let viewController = PlayerViewController(viewModel: viewModel)
 //        appDetaillViewController.app = self.app
         self.push(viewController: viewController)
     }

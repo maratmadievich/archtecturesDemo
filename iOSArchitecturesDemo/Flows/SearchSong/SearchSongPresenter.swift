@@ -56,7 +56,8 @@ extension SearchSongPresenter: SearchSongPresenterProtocol {
     func didSelect(row: Int) {
         guard row < cellPresenters.count else { return }
         let song = cellPresenters[row].getSong()
-        self.router.openPlayer(song: song)
+        let songs = cellPresenters.map({ $0.getSong() })
+        self.router.openPlayer(song: song, allSongs: songs)
     }
     
 }

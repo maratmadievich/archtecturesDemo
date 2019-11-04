@@ -17,12 +17,17 @@
 		043445D5236745E800EA3729 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043445D4236745E800EA3729 /* UpdateViewController.swift */; };
 		043445D7236745F800EA3729 /* UpdatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043445D6236745F800EA3729 /* UpdatePresenter.swift */; };
 		043445DB2367554C00EA3729 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043445DA2367554C00EA3729 /* UpdateViewController.xib */; };
+		044527F223706BD60071C353 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044527F123706BD60071C353 /* Track.swift */; };
 		04AA625F236DE20300017757 /* SongCellPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */; };
 		04AA6262236E148300017757 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6261236E148300017757 /* RootView.swift */; };
 		04B35ACD236F2976009FDCCC /* SearchSongInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35ACC236F2976009FDCCC /* SearchSongInteractor.swift */; };
 		04B35ACF236F2986009FDCCC /* SearchSongRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35ACE236F2986009FDCCC /* SearchSongRouter.swift */; };
 		04B35AD1236F299C009FDCCC /* SearchSongAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35AD0236F299C009FDCCC /* SearchSongAssembler.swift */; };
 		04B35AD4236F3419009FDCCC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35AD3236F3419009FDCCC /* PlayerViewController.swift */; };
+		04B35AD6236F3A27009FDCCC /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35AD5236F3A27009FDCCC /* Observer.swift */; };
+		04B35AD8236F3A6A009FDCCC /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35AD7236F3A6A009FDCCC /* PlayerViewModel.swift */; };
+		04B35ADB236F3AE9009FDCCC /* PlaySongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35ADA236F3AE9009FDCCC /* PlaySongService.swift */; };
+		04B35ADD236F3E16009FDCCC /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35ADC236F3E16009FDCCC /* PlayingState.swift */; };
 		04BFEF6C2368932D00E4AFEA /* ScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEF6B2368932D00E4AFEA /* ScreenshotsViewController.swift */; };
 		04BFEF6E2368933800E4AFEA /* ScreenshotsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEF6D2368933800E4AFEA /* ScreenshotsPresenter.swift */; };
 		04BFEF702368934700E4AFEA /* ScreenshotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEF6F2368934700E4AFEA /* ScreenshotsViewController.xib */; };
@@ -62,12 +67,17 @@
 		043445D4236745E800EA3729 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		043445D6236745F800EA3729 /* UpdatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePresenter.swift; sourceTree = "<group>"; };
 		043445DA2367554C00EA3729 /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		044527F123706BD60071C353 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellPresenterFactory.swift; sourceTree = "<group>"; };
 		04AA6261236E148300017757 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		04B35ACC236F2976009FDCCC /* SearchSongInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongInteractor.swift; sourceTree = "<group>"; };
 		04B35ACE236F2986009FDCCC /* SearchSongRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongRouter.swift; sourceTree = "<group>"; };
 		04B35AD0236F299C009FDCCC /* SearchSongAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongAssembler.swift; sourceTree = "<group>"; };
 		04B35AD3236F3419009FDCCC /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		04B35AD5236F3A27009FDCCC /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		04B35AD7236F3A6A009FDCCC /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		04B35ADA236F3AE9009FDCCC /* PlaySongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySongService.swift; sourceTree = "<group>"; };
+		04B35ADC236F3E16009FDCCC /* PlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingState.swift; sourceTree = "<group>"; };
 		04BFEF6B2368932D00E4AFEA /* ScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewController.swift; sourceTree = "<group>"; };
 		04BFEF6D2368933800E4AFEA /* ScreenshotsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsPresenter.swift; sourceTree = "<group>"; };
 		04BFEF6F2368934700E4AFEA /* ScreenshotsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotsViewController.xib; sourceTree = "<group>"; };
@@ -165,8 +175,19 @@
 			isa = PBXGroup;
 			children = (
 				04B35AD3236F3419009FDCCC /* PlayerViewController.swift */,
+				04B35AD7236F3A6A009FDCCC /* PlayerViewModel.swift */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		04B35AD9236F3AAC009FDCCC /* PlaySongService */ = {
+			isa = PBXGroup;
+			children = (
+				04B35ADC236F3E16009FDCCC /* PlayingState.swift */,
+				04B35ADA236F3AE9009FDCCC /* PlaySongService.swift */,
+				044527F123706BD60071C353 /* Track.swift */,
+			);
+			path = PlaySongService;
 			sourceTree = "<group>";
 		};
 		04BFEF6A2368931300E4AFEA /* Screenshots */ = {
@@ -380,6 +401,7 @@
 				F8A1E03E224850E500FE6448 /* Monads */,
 				E0E1D359203ADCE10011E01A /* NetworkManager */,
 				E0E1D3D2203C4A850011E01A /* Extensions */,
+				04B35AD5236F3A27009FDCCC /* Observer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -395,6 +417,7 @@
 		F8A1E0402248511B00FE6448 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04B35AD9236F3AAC009FDCCC /* PlaySongService */,
 				04180355236DB421003DADAD /* DateStringConverter */,
 				E0E1D385203AE3E00011E01A /* AppStartManager */,
 				E0E1D393203AE5AA0011E01A /* iTunesSearchService */,
@@ -556,6 +579,7 @@
 			files = (
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				04B35ACD236F2976009FDCCC /* SearchSongInteractor.swift in Sources */,
+				04B35ADB236F3AE9009FDCCC /* PlaySongService.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				04180354236DA343003DADAD /* ScreenshotCellPresenterFactory.swift in Sources */,
 				04BFEF6E2368933800E4AFEA /* ScreenshotsPresenter.swift in Sources */,
@@ -563,6 +587,7 @@
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				04180357236DB439003DADAD /* DateStringConverter.swift in Sources */,
 				04B35AD1236F299C009FDCCC /* SearchSongAssembler.swift in Sources */,
+				04B35AD8236F3A6A009FDCCC /* PlayerViewModel.swift in Sources */,
 				043445D7236745F800EA3729 /* UpdatePresenter.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				04AA6262236E148300017757 /* RootView.swift in Sources */,
@@ -570,6 +595,8 @@
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
+				044527F223706BD60071C353 /* Track.swift in Sources */,
+				04B35ADD236F3E16009FDCCC /* PlayingState.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
 				043445D5236745E800EA3729 /* UpdateViewController.swift in Sources */,
 				04AA625F236DE20300017757 /* SongCellPresenterFactory.swift in Sources */,
@@ -589,6 +616,7 @@
 				04180361236DC272003DADAD /* SongCellPresenter.swift in Sources */,
 				0418035F236DBD8F003DADAD /* SongCell.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
+				04B35AD6236F3A27009FDCCC /* Observer.swift in Sources */,
 				04B35ACF236F2986009FDCCC /* SearchSongRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
