@@ -11,21 +11,24 @@ import UIKit
 protocol SearchSongPresenterProtocol: class {
     var itemsCount: Int { get }
     
-    init(view: SearchSongViewProtocol)
+    init(interactor: SearchSongInteractorProtocol, router: SearchSongRouterProtocol)
+    func didSelect(row: Int)
     func didEntered(query: String?)
     func getCellPresenter(for row: Int) -> SongCellPresenterProtocol
+    
 }
 
 class SearchSongPresenter {
     
-    private weak var view: SearchSongViewProtocol?
-    private let searchService = ITunesSearchService()
-    private let cellPresenterFactory = SongCellPresenterFactory()
+    weak var view: SearchSongViewProtocol?
+    private var interactor: SearchSongInteractorProtocol!
+    private var router: SearchSongRouterProtocol!
     
     private var cellPresenters: [SongCellPresenterProtocol] = []
     
-    required init(view: SearchSongViewProtocol) {
-        self.view = view
+    required init(interactor: SearchSongInteractorProtocol, router: SearchSongRouterProtocol) {
+        self.router = router
+        self.interactor = interactor
     }
     
 }
@@ -50,6 +53,13 @@ extension SearchSongPresenter: SearchSongPresenterProtocol {
         self.requestSongs(with: query)
     }
     
+    func didSelect(row: Int) {
+        guard row < cellPresenters.count else { return }
+        let song = cellPresenters[row].getSong()
+        let songs = cellPresenters.map({ $0.getSong() })
+        self.router.openPlayer(song: song, allSongs: songs)
+    }
+    
 }
 
 //MARK: - Private functions
@@ -60,26 +70,23 @@ extension SearchSongPresenter {
         self.cellPresenters.removeAll()
         self.view?.updateTableView()
         
-        self.searchService.getSongs(forQuery: query) { [weak self] (result) in
-            
+        self.interactor.getSongs(query: query) { [weak self] (cellPresenters, error) in
             DispatchQueue.main.async {
-                switch result {
-                case .success(let songs):
-                    self?.handleGet(songs: songs)
-                    
-                case .failure(let error):
+                if let error = error {
                     self?.view?.show(error: error)
+                } else if let cellPresenters = cellPresenters {
+                    self?.handleGet(cellPresenters: cellPresenters)
                 }
             }
         }
     }
     
     
-    private func handleGet(songs: [ITunesSong]) {
-        if songs.count <= 0 {
+    private func handleGet(cellPresenters: [SongCellPresenterProtocol]) {
+        self.cellPresenters = cellPresenters
+        if cellPresenters.count <= 0 {
             self.view?.updateEmptyResults(isHide: false)
         } else {
-            self.cellPresenters = cellPresenterFactory.makeCellPresenters(songs: songs)
             self.view?.updateEmptyResults(isHide: true)
             self.view?.updateTableView()
         }

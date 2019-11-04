@@ -18,10 +18,10 @@ protocol SearchSongViewProtocol: class {
 
 class SearchSongView: UIViewController {
     
-    private var presenter: SearchSongPresenterProtocol!
-    private let cellIdentifier: String = "SongCell"
+    var presenter: SearchSongPresenterProtocol!
     
     private let navigationTitle = "Find Song"
+    private let cellIdentifier: String = "SongCell"
     
     private var searchView: SearchView {
         return self.view as! SearchView
@@ -29,7 +29,7 @@ class SearchSongView: UIViewController {
     
     override func loadView() {
         super.loadView()
-        configurePresenter()
+        assembleModule()
         self.view = SearchView()
     }
 
@@ -99,16 +99,16 @@ extension SearchSongView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-//        let item = self.searchResults[indexPath.row]
-//        item.didSelect(in: self)
+        presenter.didSelect(row: indexPath.row)
     }
 }
 
+//MARK: - assemble VIPER module
 extension SearchSongView {
     
-    private func configurePresenter() {
-        self.presenter = SearchSongPresenter(view: self)
+    private func assembleModule() {
+        let assembler = SearchSongAssembler()
+        assembler.assemble(view: self)
     }
     
 }
