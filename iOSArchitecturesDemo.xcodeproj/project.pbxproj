@@ -18,6 +18,8 @@
 		043445D7236745F800EA3729 /* UpdatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043445D6236745F800EA3729 /* UpdatePresenter.swift */; };
 		043445DB2367554C00EA3729 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043445DA2367554C00EA3729 /* UpdateViewController.xib */; };
 		044527F223706BD60071C353 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044527F123706BD60071C353 /* Track.swift */; };
+		044527F423708B130071C353 /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044527F323708B130071C353 /* SongList.swift */; };
+		044527F723708B7D0071C353 /* SearchCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044527F623708B7D0071C353 /* SearchCacheService.swift */; };
 		04AA625F236DE20300017757 /* SongCellPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */; };
 		04AA6262236E148300017757 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6261236E148300017757 /* RootView.swift */; };
 		04B35ACD236F2976009FDCCC /* SearchSongInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B35ACC236F2976009FDCCC /* SearchSongInteractor.swift */; };
@@ -68,6 +70,8 @@
 		043445D6236745F800EA3729 /* UpdatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePresenter.swift; sourceTree = "<group>"; };
 		043445DA2367554C00EA3729 /* UpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
 		044527F123706BD60071C353 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		044527F323708B130071C353 /* SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
+		044527F623708B7D0071C353 /* SearchCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCacheService.swift; sourceTree = "<group>"; };
 		04AA625E236DE20300017757 /* SongCellPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellPresenterFactory.swift; sourceTree = "<group>"; };
 		04AA6261236E148300017757 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		04B35ACC236F2976009FDCCC /* SearchSongInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongInteractor.swift; sourceTree = "<group>"; };
@@ -163,6 +167,14 @@
 			path = Update;
 			sourceTree = "<group>";
 		};
+		044527F523708B560071C353 /* SearchCacheService */ = {
+			isa = PBXGroup;
+			children = (
+				044527F623708B7D0071C353 /* SearchCacheService.swift */,
+			);
+			path = SearchCacheService;
+			sourceTree = "<group>";
+		};
 		04AA6260236E146900017757 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,14 +192,13 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
-		04B35AD9236F3AAC009FDCCC /* PlaySongService */ = {
+		04B35AD9236F3AAC009FDCCC /* PlayerService */ = {
 			isa = PBXGroup;
 			children = (
 				04B35ADC236F3E16009FDCCC /* PlayingState.swift */,
 				04B35ADA236F3AE9009FDCCC /* PlaySongService.swift */,
-				044527F123706BD60071C353 /* Track.swift */,
 			);
-			path = PlaySongService;
+			path = PlayerService;
 			sourceTree = "<group>";
 		};
 		04BFEF6A2368931300E4AFEA /* Screenshots */ = {
@@ -388,8 +399,10 @@
 		F8114FC622A3E8DF00102830 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				044527F123706BD60071C353 /* Track.swift */,
 				E0E1D398203AE62E0011E01A /* ITunesApp.swift */,
 				E0E1D39B203AE6420011E01A /* ITunesSong.swift */,
+				044527F323708B130071C353 /* SongList.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -417,7 +430,8 @@
 		F8A1E0402248511B00FE6448 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				04B35AD9236F3AAC009FDCCC /* PlaySongService */,
+				044527F523708B560071C353 /* SearchCacheService */,
+				04B35AD9236F3AAC009FDCCC /* PlayerService */,
 				04180355236DB421003DADAD /* DateStringConverter */,
 				E0E1D385203AE3E00011E01A /* AppStartManager */,
 				E0E1D393203AE5AA0011E01A /* iTunesSearchService */,
@@ -582,6 +596,7 @@
 				04B35ADB236F3AE9009FDCCC /* PlaySongService.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				04180354236DA343003DADAD /* ScreenshotCellPresenterFactory.swift in Sources */,
+				044527F723708B7D0071C353 /* SearchCacheService.swift in Sources */,
 				04BFEF6E2368933800E4AFEA /* ScreenshotsPresenter.swift in Sources */,
 				04B35AD4236F3419009FDCCC /* PlayerViewController.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
@@ -607,6 +622,7 @@
 				2BACE96F2360C4600099A2C9 /* HeaderInfoViewController.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
 				04BFEF6C2368932D00E4AFEA /* ScreenshotsViewController.swift in Sources */,
+				044527F423708B130071C353 /* SongList.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,

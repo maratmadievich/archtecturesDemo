@@ -18,17 +18,23 @@ class SearchSongInteractor: SearchSongInteractorProtocol {
     weak var presenter: SearchSongPresenterProtocol?
     private let searchService = ITunesSearchService()
     private let cellPresenterFactory = SongCellPresenterFactory()
-    
+    private let cacheService: SearchCacheInterface = SearchCacheService.shared
     
     internal func getSongs(query: String, completion: @escaping ([SongCellPresenterProtocol]?, Error?) -> Void) {
-        searchService.getSongs(forQuery: query) { [weak self] result in
-            switch result {
-            case .success(let songs):
-                let cellPresenters = self?.makeCellPresenters(songs: songs)
-                completion(cellPresenters, nil)
-                
-            case .failure(let error):
-                completion(nil, error)
+        if let songs = cacheService.getSongs(for: query) {
+             let cellPresenters = makeCellPresenters(songs: songs)
+            completion(cellPresenters, nil)
+        } else {
+            searchService.getSongs(forQuery: query) { [weak self] result in
+                switch result {
+                case .success(let songs):
+                    self?.cacheService.save(songs: songs, for: query)
+                    let cellPresenters = self?.makeCellPresenters(songs: songs)
+                    completion(cellPresenters, nil)
+                    
+                case .failure(let error):
+                    completion(nil, error)
+                }
             }
         }
     }
